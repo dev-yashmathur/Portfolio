@@ -7,7 +7,7 @@ h1 {
     display: inline-block;
     text-align: center;
     aspect-ratio: 1 / 1;
-    font-size: 12vw;
+    /* font-size: 12vw; */
     vertical-align: middle;
     border: solid;
     border-width: 2px;
@@ -21,4 +21,12 @@ h1 {
     padding: 1em;
     max-width: 540;
     margin: auto;
+}
+
+.won {
+    background-color: lightgreen !important;
+}
+
+.disabled {
+    pointer-events: none;
 }
