@@ -1,0 +1,32 @@
+.grid-square {
+    background-color: lightblue;
+    display: inline-block;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    font-size: min(12vw, 6em);
+    vertical-align: middle;
+    border: solid;
+    border-width: 2px;
+}
+
+.grid-square:hover {
+    background-color: lightskyblue;
+}
+
+.game-container {
+    padding: 1em;
+    max-width: 540;
+    margin: auto;
+}
+
+.won {
+    background-color: lightgreen !important;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.active {
+    border: solid 2px;
+}

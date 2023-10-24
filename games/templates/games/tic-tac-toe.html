@@ -2,27 +2,29 @@
 {% load static %}
 
 {% block game %}
-<div class="game-container">
-  <div class="row">
-    <button id="1" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="2" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="3" class="col-4 grid-square" onclick="played(this)"></button>
-  </div>
-  <div class="row">
-    <button id="4" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="5" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="6" class="col-4 grid-square" onclick="played(this)"></button>
-  </div>
-  <div class="row">
-    <button id="7" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="8" class="col-4 grid-square" onclick="played(this)"></button>
-    <button id="9" class="col-4 grid-square" onclick="played(this)"></button>
+  <link href="{% static 'games/tic-tac-toe.css' %}" rel="stylesheet" />
+  <div id="game-container" class="game-container">
+    <div class="row">
+      <button id="1" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="2" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="3" class="col-4 grid-square" onclick="played(this)"></button>
+    </div>
+    <div class="row">
+      <button id="4" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="5" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="6" class="col-4 grid-square" onclick="played(this)"></button>
+    </div>
+    <div class="row">
+      <button id="7" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="8" class="col-4 grid-square" onclick="played(this)"></button>
+      <button id="9" class="col-4 grid-square" onclick="played(this)"></button>
+    </div>
   </div>
 
-  <div class="resetButton">
-    <button class="col-12" onclick="reset()">RESET</button>
-  </div>
-</div>
+  <script src="{% static 'games/tic-tac-toe.js' %}"></script>
 
-<script src="{% static 'games/tic-tac-toe.js' %}"></script>
+  <script>
+    const api_url = "{% url 'api-test'%}"
+    const csrf = '{{ csrf_token }}'
+  </script>
 {% endblock %}
