@@ -181,9 +181,9 @@ function reset() {
         el.classList.remove("won")
         el.classList.remove("disabled")
     }
-    turn = "X"
-    document.getElementsByClassName('X' + "-turn")[0].classList.add("active")
-    document.getElementsByClassName('O' + "-turn")[0].classList.remove("active")
+    // turn = "X"
+    // document.getElementsByClassName('X' + "-turn")[0].classList.add("active")
+    // document.getElementsByClassName('O' + "-turn")[0].classList.remove("active")
     document.getElementById("overlay").classList.add("hidden")
     document.getElementById("result-modal").classList.add("hidden")
 }

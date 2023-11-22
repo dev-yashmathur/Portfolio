@@ -11,9 +11,9 @@ def tic_tac_toe(request):
 
 def api_test(request):
     p1 = Agent("X")
-    p1.loadPolicy("games/policies/tic_tac_toe_player_1")
+    p1.loadPolicy("games/policies/Policy_player1")
     p2 = Agent("O")
-    p2.loadPolicy("games/policies/tic_tac_toe_player_2")
+    p2.loadPolicy("games/policies/Policy_player2")
     turn = request.POST['turn']
     board = request.POST['board']
     if(turn == "X"):
